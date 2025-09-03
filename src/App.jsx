@@ -1,12 +1,12 @@
+import { Outlet } from "react-router";
 import { Header } from "./app/features/Header";
-import { LoginPage } from "./app/pages/LoginPage";
 import "./App.css";
 
-function App() {
+export function App() {
   return (
     <>
       <Header />
-      <LoginPage></LoginPage>
+      <Outlet />
     </>
   );
 }
