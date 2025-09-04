@@ -1,6 +1,6 @@
 import { Formik } from "formik";
-import { BasicInput } from "../../../components/BasicInput";
-import { BasicButton } from "../../../components/BasicButton";
+import { BasicInput } from "@/components/BasicInput";
+import { BasicButton } from "@/components/BasicButton";
 import { useDispatch, useSelector } from "react-redux";
 import { loginByEmail } from "../model/thunks";
 import { selectAuthError, selectAuthLoading } from "../model/selectors";
