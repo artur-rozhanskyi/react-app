@@ -1,5 +1,5 @@
 import { Outlet } from "react-router";
-import { Header } from "./app/features/Header";
+import { Header } from "@/features/Header";
 import "./App.css";
 
 export function App() {

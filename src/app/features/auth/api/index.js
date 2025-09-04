@@ -1,5 +1,5 @@
-import { createApiClient } from "../../../shared/api/baseApi";
-import { API_BASE_URLS } from "../../../shared/config";
+import { createApiClient } from "@/shared/api/baseApi";
+import { API_BASE_URLS } from "@/shared/config";
 
 const authRequest = createApiClient(API_BASE_URLS.auth);
 
