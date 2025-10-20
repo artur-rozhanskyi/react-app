@@ -4,22 +4,26 @@ import Divider from "@mui/material/Divider";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
-import { useNavigate } from "react-router";
-import { useCallback } from "react";
+import { NavLink } from "react-router";
 
 export const QuestionListItem = ({ question }) => {
-  const navigate = useNavigate();
 
   const { title, body, id } = question;
   const icon = undefined;
 
-  const redirectToQuestion = useCallback(() => {
-    navigate(`/questions/${id}`);
-  }, [navigate, id]);
-
   return (
     <>
-      <ListItem alignItems="flex-start" button onClick={redirectToQuestion}>
+      <ListItem
+        alignItems="flex-start"
+        component={NavLink}
+        to={`/questions/${id}`}
+        end
+        sx={{
+          "&.active": {
+            backgroundColor: "action.selected",
+          },
+        }}
+      >
         <ListItemAvatar>
           <Avatar sx={{ bgcolor: "primary.main" }}>{icon}</Avatar>
         </ListItemAvatar>

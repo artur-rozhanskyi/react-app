@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import { LoginPage } from "./pages/LoginPage";
-import { QuetionListPage } from "./pages/QuestionListPage";
+import { QuestionListPage} from "./pages/QuestionListPage";
+import { QuestionShowPage } from "./pages/QuestionShowPage";
 import App from "../App";
 
 export const router = createBrowserRouter([
@@ -10,8 +11,12 @@ export const router = createBrowserRouter([
     children: [
       { index: true, Component: LoginPage },
       {
-        path: "/questions",
-        Component: QuetionListPage,
+        path: "questions",
+        Component: QuestionListPage,
+      },
+      {
+        path: "questions/:questionId",
+        Component: QuestionShowPage,
       },
     ],
   },

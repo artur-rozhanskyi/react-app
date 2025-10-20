@@ -27,7 +27,7 @@ export function Header() {
   };
 
   return (
-    <AppBar position="absolute">
+    <AppBar position='relative'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
